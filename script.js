@@ -1,4 +1,3 @@
-window.promises = [];
 const output = document.querySelector(`#output`);
 
 // function promise1(params) {
@@ -81,13 +80,20 @@ let myPromise5 = new Promise((resolve, reject) => {
     resolve(`promise 5`);
   }, 1500);
 });
+window.promises = [
+	myPromise1,
+	myPromise2,
+	myPromise3,
+	myPromise4,
+	myPromise5,
+];
 
 let arr = Promise.any([
-  myPromise1,
-  myPromise2,
-  myPromise3,
-  myPromise4,
-  myPromise5,
+ myPromise1,
+	myPromise2,
+	myPromise3,
+	myPromise4,
+	myPromise5,
 ]).then((res) => {
   output.innerHTML = res;
 });
