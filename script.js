@@ -88,12 +88,8 @@ window.promises = [
 	myPromise5,
 ];
 
-let arr = Promise.any([
- myPromise1,
-	myPromise2,
-	myPromise3,
-	myPromise4,
-	myPromise5,
+Promise.any([
+window.promises
 ]).then((res) => {
   output.innerHTML = res;
 });
