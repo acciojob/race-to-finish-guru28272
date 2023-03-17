@@ -88,9 +88,9 @@ window.promises = [
 	myPromise5,
 ];
 
-Promise.any([
+Promise.any(
 window.promises
-]).then((res) => {
+).then((res) => {
   output.innerHTML = res;
 });
 // Do not change the code above this
