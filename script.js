@@ -44,8 +44,8 @@ function promise5(params) {
   });
   return myPromise;
 }
-
-Promise.any([promise1(), promise2(), promise3(), promise4(), promise5()]).then(
+let promises = [promise1(), promise2(), promise3(), promise4(), promise5()]
+Promise.any(promises).then(
   (res) => {
     output.innerHTML = res;
   }
